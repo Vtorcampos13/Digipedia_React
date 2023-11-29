@@ -1,17 +1,21 @@
 import './Buscador.css';
 import { Buscar } from './Icons';
-function Buscador() {
+
+
+function Buscador({ search, setSearch, searchDigimon }) {
 
     return (
         <>
             <h3 className='titulo'>Mas de 200 digimons, elige tu favorito</h3>
-            <section className='container-buscador'>
-                <input type="text" placeholder='Encuentra tu digimon' className='input-buscar'/>
-                <button className='btn-buscar'>
+            <form className='container-buscador' onSubmit={searchDigimon}>
+                <input type="text" placeholder='Encuentra tu digimon' className='input-buscar'
+                    value={search}
+                    onChange={(e)=> setSearch(e.target.value)}/>
+                <button className='btn-buscar' type='submit'>
                     <Buscar />
                     Buscar digimon
                 </button>
-            </section>
+            </form>
         </>
     )
 }

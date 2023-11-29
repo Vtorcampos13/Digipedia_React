@@ -1,7 +1,16 @@
+import { useEffect, useState } from 'react';
 import { Luna, Sol } from './Icons';
 import './Navbar.css';
 
 const Navbar = () => {
+
+    const [theme, setTheme] = useState('light')
+
+    const handleChange = (e) => setTheme(e.target.checked ? 'dark' : 'light')
+
+    useEffect(() => {
+        document.body.setAttribute('data-theme', theme)
+    }, [theme])
 
     return (
         <nav>
@@ -9,7 +18,7 @@ const Navbar = () => {
             <div className="switch">
                 <Sol />
                 <label>
-                    <input type="checkbox" className='check-switch' hidden/>
+                    <input type="checkbox" className='check-switch'onChange={handleChange} hidden/>
                     <span className='slider'></span>
                 </label>
                 <Luna />

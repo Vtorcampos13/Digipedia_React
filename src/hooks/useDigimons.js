@@ -5,6 +5,25 @@ function useDigimons(){
     const [nextUrl, setNextUrl] = useState('')
     const [more, setMore] = useState(true)
     const currentUrl = 'https://www.digi-api.com/api/v1/digimon?pageSize=20'
+    const urlEndPoint = 'https://www.digi-api.com/api/v1/digimon/'
+
+    const fetchDigimon = async (url) => {
+            const response = await fetch(url)
+            const digi = await response.json()
+
+            const types = digi.types.map(t => t.type)
+            const skills = digi.skills.map(s => s.skill)
+            const descriptions = digi.descriptions.map(d => d.description)
+
+            return {
+                id: digi.id,
+                name: digi.name,
+                img: digi.images[0].href,
+                types,
+                skills,
+                descriptions
+            }
+        }
 
     useEffect(() => {
         loadDigimons()
@@ -15,20 +34,9 @@ function useDigimons(){
             const data = await response.json()
             const { nextPage, content } = data
 
-            const newDigimons = await Promise.all(content.map(async (digimon) => {
-                const response = await fetch(digimon.href)
-                const digi = await response.json()
-
-                const types = digi.types.map(name => name.type)
-                const skills = digi.skills.map(name => name.skill)
-                const descriptions = digi.descriptions.map(name => name.description)
-
-                return {
-                    id: digi.id,
-                    name: digi.name,
-                    img: digi.images[0].href
-                }
-            }))
+            const newDigimons = await Promise.all
+                (content.map((digimon) => fetchDigimon(digimon.href))
+            )
 
             return { nextPage, newDigimons }
         }
@@ -46,8 +54,13 @@ function useDigimons(){
             setNextUrl(nextPage)
         }
 
+        const findDigimon = async (search) => {
+            const url = `${urlEndPoint}${search.toLowerCase()}`
+            return await fetchDigimon(url)
+        }
 
-    return { digimons, loadMoreDigimons, more}
+
+    return { digimons, loadMoreDigimons, more, findDigimon }
 }
 
 export default useDigimons;
