@@ -1,0 +1,51 @@
+.titulo {
+    font-size: 36px;
+    font-weight: 400;
+    color: black;
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+}
+
+.container-buscador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 0;
+}
+
+.input-buscar {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 12px;
+    flex: .4;
+    font-size: 16px;
+    box-shadow: 4px 4px 16px #00000030;
+}
+
+.btn-buscar {
+    background-color: rgba(255,194,0,1);
+    color: black;
+    border-radius: 10px;
+    padding: 12px;
+    border: none;
+    box-shadow: 4px 4px 16px #00000030;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 5px;
+    font-size: 16px;
+    transition: 0.4s;
+}
+
+.btn-buscar > svg {
+    width: 18px;
+    fill: black;
+}
+
+.btn-buscar:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+}
