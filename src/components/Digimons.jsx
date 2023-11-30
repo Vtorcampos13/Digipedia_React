@@ -6,7 +6,7 @@ import DetailsDigimon from './DetailsDigimon';
 import Buscador from './Buscador';
 import { useState } from 'react';
 
-
+//Funcion para mostrar el modal del digimon
 function Digimon({id, name, img, showDigimon}){
     return (
         <section className="digimon-card" onClick={showDigimon}>
@@ -19,7 +19,7 @@ function Digimon({id, name, img, showDigimon}){
     )
 }
 
-
+//Funcion para mostrar los digimons
 function Digimones () {
 
     const { digimons, loadMoreDigimons, more, findDigimon } = useDigimons()
@@ -31,14 +31,23 @@ function Digimones () {
     const noShowDigimon = () => setShow({ show: false, digimon: {}})
 
     const searchDigimon = async(e) => {
-        e.preventDefault()
+        e.preventDefault();
 
-        if(!search) return
+        if (!search) return;
 
-        const digimon = await findDigimon(search)
+        try {
+            const digimon = await findDigimon(search);
 
-        setShow({ show: true, digimon })
-    }
+            // Verificar si se encontró el digimon
+            if (digimon.id) {
+                setShow({ show: true, digimon });
+            } else {
+                alert(`No se encontró ningún digimon con el nombre "${search}"`);
+            }
+        } catch (error) {
+            alert('Digimon no encontrado o no existe');
+        }
+    };
     
     return (
         <>

@@ -6,7 +6,7 @@ function Buscador({ search, setSearch, searchDigimon }) {
 
     return (
         <>
-            <h3 className='titulo'>Mas de 200 digimons, elige tu favorito</h3>
+            <h3 className='titulo'>Mas de 1000 digimons, elige tu favorito</h3>
             <form className='container-buscador' onSubmit={searchDigimon}>
                 <input type="text" placeholder='Encuentra tu digimon' className='input-buscar'
                     value={search}

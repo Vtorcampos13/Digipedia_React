@@ -4,6 +4,7 @@ import './Navbar.css';
 
 const Navbar = () => {
 
+//Funcion para cambiar el tema de la pagina web, de claro a oscuro y viceversa
     const [theme, setTheme] = useState('light')
 
     const handleChange = (e) => setTheme(e.target.checked ? 'dark' : 'light')

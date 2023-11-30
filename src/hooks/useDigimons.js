@@ -1,12 +1,14 @@
 import { useEffect,useState } from "react";
 
 function useDigimons(){
+    // Variables de estado para digimons, URL de la siguiente página y disponibilidad de más datos
     const [digimons, setDigimons] = useState([])
     const [nextUrl, setNextUrl] = useState('')
     const [more, setMore] = useState(true)
     const currentUrl = 'https://www.digi-api.com/api/v1/digimon?pageSize=20'
     const urlEndPoint = 'https://www.digi-api.com/api/v1/digimon/'
 
+    // Función para obtener los datos de un digimon
     const fetchDigimon = async (url) => {
             const response = await fetch(url)
             const digi = await response.json()
@@ -29,11 +31,13 @@ function useDigimons(){
                 descriptions
             }
         }
-
+    
+    // Carga inicial de digimons    
     useEffect(() => {
         loadDigimons()
     }, [])
 
+        // Función para obtener los datos de los digimons  
         const getDigimons = async (url = currentUrl) => {
             const response = await fetch(url)
             const data = await response.json()
@@ -46,6 +50,7 @@ function useDigimons(){
             return { nextPage, newDigimons }
         }
 
+        // Función para cargar más digimons
         const loadDigimons = async () => {
             const { nextPage, newDigimons } = await getDigimons()
             setDigimons(newDigimons)
@@ -59,6 +64,7 @@ function useDigimons(){
             setNextUrl(nextPage)
         }
 
+        // Función para buscar un digimon
         const findDigimon = async (search) => {
             const url = `${urlEndPoint}${search.toLowerCase()}`
             return await fetchDigimon(url)
