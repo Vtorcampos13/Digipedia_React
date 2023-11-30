@@ -10,7 +10,7 @@ function Buscador({ search, setSearch, searchDigimon }) {
             <form className='container-buscador' onSubmit={searchDigimon}>
                 <input type="text" placeholder='Encuentra tu digimon' className='input-buscar'
                     value={search}
-                    onChange={(e)=> setSearch(e.target.value)}/>
+                    onChange={(e) => setSearch(e.target.value)}/>
                 <button className='btn-buscar' type='submit'>
                     <Buscar />
                     Buscar digimon

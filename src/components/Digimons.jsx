@@ -30,6 +30,7 @@ function Digimones () {
 
     const noShowDigimon = () => setShow({ show: false, digimon: {}})
 
+
     const searchDigimon = async(e) => {
         e.preventDefault();
 
@@ -48,6 +49,7 @@ function Digimones () {
             alert('Digimon no encontrado o no existe');
         }
     };
+
     
     return (
         <>

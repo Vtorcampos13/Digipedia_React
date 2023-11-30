@@ -41,7 +41,10 @@ function useDigimons(){
         const getDigimons = async (url = currentUrl) => {
             const response = await fetch(url)
             const data = await response.json()
-            const { nextPage, content } = data
+            const { pageable, content } = data
+            const nextPage = pageable.nextPage
+
+            console.log('Es aquiiiiii',data)
 
             const newDigimons = await Promise.all
                 (content.map((digimon) => fetchDigimon(digimon.href))
