@@ -13,8 +13,13 @@ function useDigimons(){
 
             const types = digi.types.map(t => t.type)
             const skills = digi.skills.map(s => s.skill)
-            const descriptions = digi.descriptions.map(d => d.description)
-            console.log(digi);
+            const descriptions = digi.descriptions.map(d => {
+                if(d.language === 'en_us') {
+                    return d.description
+                }
+            })
+           
+            
             return {
                 id: digi.id,
                 name: digi.name,

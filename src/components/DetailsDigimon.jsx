@@ -14,7 +14,7 @@ function DetailsDigimon({show, digimon, close}) {
                     <h2 className='title'>{digimon.name} ({digimon.id})</h2>
 
                     <h3 className='title-section'>Descripcion</h3>
-                    {digimon.descriptions?.map(description => <span className='tag'>{description}</span>)}
+                    <span className='tag'>{digimon.descriptions}</span>
 
                     <h3 className='title-section'>Habilidades</h3>
                     <div className='skills'>
