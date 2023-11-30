@@ -15,7 +15,6 @@
     border-radius: 20px;
     background-color: var(--card);
     padding: 5px 0;
-    box-shadow: 4px 4px 4px #F18416;
     cursor: pointer;
     transition: 0.3s;
 }

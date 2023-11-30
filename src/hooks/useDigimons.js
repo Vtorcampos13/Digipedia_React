@@ -14,7 +14,7 @@ function useDigimons(){
             const types = digi.types.map(t => t.type)
             const skills = digi.skills.map(s => s.skill)
             const descriptions = digi.descriptions.map(d => d.description)
-
+            console.log(digi);
             return {
                 id: digi.id,
                 name: digi.name,
