@@ -28,7 +28,6 @@ bash
 
     npm run dev
 
-La aplicación estará disponible en http://localhost:3000.
 Uso
 Barra de Búsqueda
 
@@ -46,9 +45,8 @@ Paginación Infinita
 Tecnologías Utilizadas
 
     React
-    Fetch API
-    Digi-API
+    Digi API
 
 Contribuciones
 
-Si encuentras algún problema o tienes sugerencias de mejoras, ¡no dudes en crear un issue o enviar un pull request!
+Si encuentras algún problema o tienes sugerencias de mejoras, ¡no dudes en contactar con nosotros!
