@@ -1,8 +1,54 @@
-# React + Vite
+Digimon Search App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta aplicación web está diseñada para explorar y buscar información sobre Digimons, proporcionando detalles como nombre, descripción, ataques, e imágenes. La aplicación utiliza la Digi-API para obtener datos actualizados sobre los Digimons.
+Características
 
-Currently, two official plugins are available:
+    Búsqueda por Nombre e ID: Encuentra Digimons fácilmente utilizando su nombre o ID.
+    Detalles del Digimon: Obtén información detallada sobre un Digimon, incluyendo descripciones y ataques.
+    Paginación Infinita: Explora una lista de Digimons de manera continua mediante la carga de más resultados.
+    Sugerencias de Búsqueda: Recibe sugerencias mientras escribes en la barra de búsqueda.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Instalación
+
+    Clona este repositorio en tu máquina local.
+
+bash
+
+git clone https://github.com/tu-usuario/digimon-search-app.git
+
+    Instala las dependencias.
+
+bash
+
+    npm install
+
+Inicia la aplicación.
+
+bash
+
+    npm run dev
+
+La aplicación estará disponible en http://localhost:3000.
+Uso
+Barra de Búsqueda
+
+    Ingresa el nombre o ID del Digimon que deseas buscar en la barra de búsqueda.
+    A medida que escribes, recibirás sugerencias en tiempo real basadas en los resultados disponibles.
+
+Detalles del Digimon
+
+    Haz clic en un Digimon de la lista para ver detalles más específicos, incluyendo descripciones y ataques.
+
+Paginación Infinita
+
+    Desplázate hacia abajo en la lista para cargar más Digimons automáticamente.
+
+Tecnologías Utilizadas
+
+    React
+    Fetch API
+    Digi-API
+
+Contribuciones
+
+Si encuentras algún problema o tienes sugerencias de mejoras, ¡no dudes en crear un issue o enviar un pull request!
