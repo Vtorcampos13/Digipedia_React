@@ -3,10 +3,10 @@
 Esta aplicación web está diseñada para explorar y buscar información sobre Digimons, proporcionando detalles como nombre, descripción, ataques, e imágenes. La aplicación utiliza la Digi-API para obtener datos actualizados sobre los Digimons.
 Características
 
-**Búsqueda por Nombre e ID**: Encuentra Digimons fácilmente utilizando su nombre o ID.
-**Detalles del Digimon**: Obtén información detallada sobre un Digimon, incluyendo descripciones y ataques.
-**Paginación Infinita**: Explora una lista de Digimons de manera continua mediante la carga de más resultados.
-**Sugerencias de Búsqueda**: Recibe sugerencias mientras escribes en la barra de búsqueda.
+- **Búsqueda por Nombre e ID**: Encuentra Digimons fácilmente utilizando su nombre o ID.
+- **Detalles del Digimon**: Obtén información detallada sobre un Digimon, incluyendo descripciones y ataques.
+- **Paginación Infinita**: Explora una lista de Digimons de manera continua mediante la carga de más resultados.
+- **Sugerencias de Búsqueda**: Recibe sugerencias mientras escribes en la barra de búsqueda.
 
 **Instalación**
 
