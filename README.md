@@ -6,7 +6,7 @@ Características
 - **Búsqueda por Nombre e ID**: Encuentra Digimons fácilmente utilizando su nombre o ID.
 - **Detalles del Digimon**: Obtén información detallada sobre un Digimon, incluyendo descripciones y ataques.
 - **Paginación Infinita**: Explora una lista de Digimons de manera continua mediante la carga de más resultados.
-- **Sugerencias de Búsqueda**: Recibe sugerencias mientras escribes en la barra de búsqueda.
+- **Cambio de tema**: Cambia el tema de la página según la iluminación interesada.
 
 **Instalación**
 
