@@ -28,15 +28,15 @@ bash
 
     npm run dev
 
-Uso
-Barra de Búsqueda
+*Uso*
+*Barra de Búsqueda*
 
-    Ingresa el nombre o ID del Digimon que deseas buscar en la barra de búsqueda.
-    A medida que escribes, recibirás sugerencias en tiempo real basadas en los resultados disponibles.
+Ingresa el nombre o ID del Digimon que deseas buscar en la barra de búsqueda.
+A medida que escribes, recibirás sugerencias en tiempo real basadas en los resultados disponibles.
 
-Detalles del Digimon
+*Detalles del Digimon*
 
-    Haz clic en un Digimon de la lista para ver detalles más específicos, incluyendo descripciones y ataques.
+Haz clic en un Digimon de la lista para ver detalles más específicos, incluyendo descripciones y ataques.
 
 Paginación Infinita
 
